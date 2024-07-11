@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4980944A-F7BB-41FF-A6D8-983E56A153FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CatBoxDesktopUILibrary</RootNamespace>
+    <AssemblyName>CatBoxDesktopUILibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>false</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>8.0</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ControlsHelper.cs" />
+    <Compile Include="Controls\FileLoadHelper.cs" />
+    <Compile Include="Controls\GraphicsHelper.cs" />
+    <Compile Include="Controls\InterGridSize.cs" />
+    <Compile Include="Controls\LoadingControl.cs" />
+    <Compile Include="Controls\Shape2D.cs" />
+    <Compile Include="Controls\ThemeHelper.cs" />
+    <Compile Include="Controls\Win32UIHelper.cs" />
+    <Compile Include="Interface\iSupportUnifyTheme.cs" />
+    <Compile Include="Modles\ColorTheme.cs" />
+    <Compile Include="Modles\Info.cs" />
+    <Compile Include="Modles\StaticSources.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\AboutBorad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\AboutBorad.Designer.cs">
+      <DependentUpon>AboutBorad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalButton.designer.cs">
+      <DependentUpon>NormalButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalCapsuleCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalCapsuleCheckBox.Designer.cs">
+      <DependentUpon>NormalCapsuleCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalCircleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalCircleButton.Designer.cs">
+      <DependentUpon>NormalCircleButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalCircleProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalCircleProgressBar.Designer.cs">
+      <DependentUpon>NormalCircleProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalComboBox.Designer.cs">
+      <DependentUpon>NormalComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalComboButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalComboButton.Designer.cs">
+      <DependentUpon>NormalComboButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalComboTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalComboTextBox.Designer.cs">
+      <DependentUpon>NormalComboTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalLayoutGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalLayoutGrid.Designer.cs">
+      <DependentUpon>NormalLayoutGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalMagneticCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalMagneticCard.Designer.cs">
+      <DependentUpon>NormalMagneticCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalPictureBoxFade.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalPictureBoxFade.Designer.cs">
+      <DependentUpon>NormalPictureBoxFade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalProgressBar.Designer.cs">
+      <DependentUpon>NormalProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalSideBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalSideBarItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalSideBarItem.Designer.cs">
+      <DependentUpon>NormalSideBarItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalSideList.Designer.cs">
+      <DependentUpon>NormalSideBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalTextBox.Designer.cs">
+      <DependentUpon>NormalTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\PictureBoxFadeIn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\FrmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\FrmBase.Designer.cs">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\FrmFileExchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\FrmFileExchange.Designer.cs">
+      <DependentUpon>FrmFileExchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\NormalMaterialBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\NormalMaterialBoard.Designer.cs">
+      <DependentUpon>NormalMaterialBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\FrmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\FrmTest.Designer.cs">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\FrmWaitMasking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\FrmWaitMasking.Designer.cs">
+      <DependentUpon>FrmWaitMasking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\PageBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Pages\PageBase.Designer.cs">
+      <DependentUpon>PageBase.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\AboutBorad.resx">
+      <DependentUpon>AboutBorad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\NormalButton.resx">
+      <DependentUpon>NormalButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\NormalCapsuleCheckBox.resx">
+      <DependentUpon>NormalCapsuleCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\NormalCircleProgressBar.resx">
+      <DependentUpon>NormalCircleProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\NormalComboBox.resx">
+      <DependentUpon>NormalComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\NormalComboButton.resx">
+      <DependentUpon>NormalComboButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\NormalComboTextBox.resx">
+      <DependentUpon>NormalComboTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\NormalLayoutGrid.resx">
+      <DependentUpon>NormalLayoutGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\NormalMagneticCard.resx">
+      <DependentUpon>NormalMagneticCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\NormalSideBar.resx">
+      <DependentUpon>NormalSideBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\NormalSideBarItem.resx">
+      <DependentUpon>NormalSideBarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\FrmBase.resx">
+      <DependentUpon>FrmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\FrmFileExchange.resx">
+      <DependentUpon>FrmFileExchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Controls\NormalMaterialBoard.resx">
+      <DependentUpon>NormalMaterialBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\FrmTest.resx">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Forms\FrmWaitMasking.resx">
+      <DependentUpon>FrmWaitMasking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Pages\PageBase.resx">
+      <DependentUpon>PageBase.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CloseD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CloseL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\CloseS0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MaxD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MaxL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MiniD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MiniL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\WindowD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\WindowL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\%281%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\%282%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\%283%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\%284%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\%285%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\%286%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\%287%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\%288%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\%289%29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

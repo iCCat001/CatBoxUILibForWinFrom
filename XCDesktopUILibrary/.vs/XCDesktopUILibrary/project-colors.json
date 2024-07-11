@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4980944a-f7bb-41ff-a6d8-983e56a153fa": {
+      "ProjectGuid": "4980944a-f7bb-41ff-a6d8-983e56a153fa",
+      "DisplayName": "CatBoxDesktopUILibrary",
+      "ColorIndex": 0
+    },
+    "43f7376e-c30b-49d7-9c83-b2b13e7cef25": {
+      "ProjectGuid": "43f7376e-c30b-49d7-9c83-b2b13e7cef25",
+      "DisplayName": "TestApp",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "杂项文件",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}
